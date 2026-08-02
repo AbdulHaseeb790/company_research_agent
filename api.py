@@ -5,11 +5,10 @@ from pydantic import BaseModel
 app=FastAPI()
 app.add_middleware(
     CORSMiddleware,
-    allow_origins=[
-        "http://localhost:5173",
-        "https://company-research-agent-woad.vercel.app",
-        "https://company-research-agent-plfc4tl8c-wedev-015c.vercel.app"
-    ],
+    allow_origins=["*"],
+    allow_methods=["*"],
+    allow_headers=["*"],
+)
     allow_methods=["*"],
     allow_headers=["*"],
 )
