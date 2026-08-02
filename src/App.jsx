@@ -13,7 +13,8 @@ function App() {
     setLoading(true)
     setError("")
     try {
-      const response = await fetch("http://localhost:8000/research", {
+      const response = await fetch("https://companyresearchagent-production.up.railway.app/research", {
+
         method: "POST",
         headers: { "Content-Type": "application/json" },
         body: JSON.stringify({ company_name: companyName })
@@ -32,7 +33,7 @@ function App() {
     setLoading(true)
     setError("")
     try {
-      const response = await fetch("http://localhost:8000/followup", {
+      const response = await fetch("https://companyresearchagent-production.up.railway.app/followup", {
         method: "POST",
         headers: { "Content-Type": "application/json" },
         body: JSON.stringify({ question: "About " + companyName + ": " + followup })
